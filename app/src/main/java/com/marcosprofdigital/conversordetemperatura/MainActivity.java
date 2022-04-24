@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
         mRadioButtonFahrenheit=findViewById(R.id.radioButtonFahrenheit);
         mRadioButtonFahrenheit.setChecked(true);
-
         mRadioButtonKelvin = findViewById(R.id.radioButtonKelvin);
     }
 }
