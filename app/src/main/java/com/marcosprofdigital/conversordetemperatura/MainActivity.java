@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private void showResult(){
         if(isEmptyValue()){
             Toast.makeText(this,"Digite algo", Toast.LENGTH_SHORT).show();
-
             return;
         }
         mTextView.setText(getResult());
