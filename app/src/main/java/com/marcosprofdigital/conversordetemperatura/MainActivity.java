@@ -24,18 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
     private double calculateFahrenheit(){
         double tempC = Double.parseDouble(mEditText.getText().toString());
-        double tempF = (tempC * 9/5) + 32;
-        return tempF;
+//        double tempF = (tempC * 9/5) + 32;
+//        return tempF;
+        return (tempC * 9/5) + 32;
     }
 
     private double calculateKelvin(){
         double tempC = Double.parseDouble(mEditText.getText().toString());
-        double tempK = tempC + 273.15;
-        return tempK;
+//        double tempK = tempC + 273.15;
+//        return tempK;
+        return tempC + 273.15;
     }
 
     public String getResult(){
-        String result = "0";
+//        String result = "0";
+        String result;
         if(mRadioButtonKelvin.isChecked()){
             //result = Double.toString(calculateKelvin()) + "K";
             result = calculateKelvin() + "K";
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private void showResult(){
         if(isEmptyValue()){
             Toast.makeText(this,"Digite algo", Toast.LENGTH_SHORT).show();
+
             return;
         }
         mTextView.setText(getResult());
